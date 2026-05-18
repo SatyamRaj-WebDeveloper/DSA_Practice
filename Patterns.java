@@ -84,7 +84,7 @@ class HollowRectangle{
                 /*if row is not 1st or last then --> 1 col and last col should 
                 have star rest everywhere it should be a space */
                 for( int col = 1 ; col<= 6 ; col++){
-                    //check if col==1 or 6
+                    //check if col==1 or 6 
                     if(col == 1 || col ==6){
                         System.out.print("* ");
                     }else{
@@ -96,3 +96,30 @@ class HollowRectangle{
         }
     }
 } 
+
+//Hollow Right Angled Triangle 
+class HollowRightTriangle{
+    public static void main(String[] args) {
+        int n = 5;
+        // First Loop for Rows
+        for(int row = 1 ; row<=n;row++){
+            //if row == 1 or 2 or n --> start col from 1 to row number print *
+            if(row == 1 || row ==2 || row == n){
+                for(int col = 1 ; col <= row ; col++){
+                    System.out.print("* ");
+                }
+            }else{
+                for(int col=1 ; col <= row ; col++){
+                    //if col == 1 or row --> print single star (*)
+                    if(col == 1 || col == row){
+                        System.out.print("* ");
+                    }else{
+                        //spaces for in between the end stars 
+                        System.out.print("  ");
+                    }
+                }
+            }
+            System.out.println();
+        }
+    }
+}
