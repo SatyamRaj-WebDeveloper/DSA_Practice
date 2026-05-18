@@ -67,3 +67,32 @@ class InvertedSolidPyramid{
         }
     }
 }
+
+//Hollow Rectangle Pattern
+class HollowRectangle{
+    public static void main(String[] args) {
+        int n = 4;
+        // First for Loop for Rows
+        for(int row = 1 ; row <= n ; row++){
+            //if 1st row or last row then --> each colum should have a star 
+            //check if col == 1 or n
+            if(row == 1 || row == n){
+                for(int col = 1 ; col <= 6 ; col++){
+                    System.out.print("* ");
+                }
+            }else{
+                /*if row is not 1st or last then --> 1 col and last col should 
+                have star rest everywhere it should be a space */
+                for( int col = 1 ; col<= 6 ; col++){
+                    //check if col==1 or 6
+                    if(col == 1 || col ==6){
+                        System.out.print("* ");
+                    }else{
+                        System.out.print("  ");
+                    }
+                }
+            }
+            System.out.println();
+        }
+    }
+} 
