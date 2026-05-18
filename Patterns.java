@@ -51,6 +51,7 @@ class SolidPyramid{
     }
 }
 
+//Inverted Solid Pyramid
 class InvertedSolidPyramid{
     int n = 4 ;
     public static void main(String[] args) {
@@ -109,17 +110,45 @@ class HollowRightTriangle{
                     System.out.print("* ");
                 }
             }else{
-                for(int col=1 ; col <= row ; col++){
-                    //if col == 1 or row --> print single star (*)
-                    if(col == 1 || col == row){
-                        System.out.print("* ");
-                    }else{
-                        //spaces for in between the end stars 
-                        System.out.print("  ");
-                    }
+                //For row number other than 1,2,n
+                // Single Star
+                System.out.print("* ");
+                // Row-2 spaces 
+                for(int col = 1 ; col <= row-2 ; col++){
+                    System.out.print("  ");
                 }
+                //Single Star
+                System.out.print("* "); 
             }
             System.out.println();
+        }
+    }
+}
+
+
+//Hollow Pyramid 
+class HollowPyramid{
+    public static void main(String[] args) {
+        int n=5;
+        for(int row = 1 ; row<=n ; row++){
+            //Spaces
+            for(int sp = 1 ; sp <= n-row ; sp++){
+                System.out.print("  ") ;
+            }
+            //if row == 1 or n ,  print stars with formula --> 2*row-1
+            if(row == 1 || row == n){
+                for(int col = 1 ; col<= 2*row-1 ; col++){
+                    System.out.print("* ");
+                }
+            }else{
+                System.out.print("* ");
+                //formula (2*row+1-4) for calculating mid spaces for rows other than 1 and n
+                for(int k = 1 ; k<= 2*row+1-4 ;k++){
+                    System.out.print("  ");
+                }
+                System.out.print("* ");
+            }
+            System.err.println();
         }
     }
 }
