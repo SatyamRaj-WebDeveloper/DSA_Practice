@@ -152,3 +152,49 @@ class HollowPyramid{
         }
     }
 }
+
+//Hollow Diamond 
+class HollowDiamond{
+    public static void main(String[] args){
+        int n = 4;
+        //Straight Hollow Pattern
+        //Rows
+        for(int row = 1 ;row<= n ; row++){
+            //Spaces from 1 --> n-row
+            for(int col = 1 ; col <= n-row ; col++){
+                System.out.print("  ");
+            }
+            //if 1st row print *
+            if(row == 1){
+                System.out.print("* ");
+            }else{
+                System.out.print("* ");
+                //Inner Spaces To make it hollow formula (2*row-3)
+                for(int j = 1 ;j<= 2*row-3 ; j++){
+                    System.out.print("  ");
+                }
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        //Inverted Hollow Pattern
+        //Rows -- Outer Loop (loop ends at n-1)
+        for(int row = 1 ; row <= n-1 ; row++){
+            for(int col = 1 ; col <= row ;col++){
+                System.out.print("  ");
+            }
+            //if last row ( n-1 ) then print * 
+            if(row == n-1){
+                System.out.print("* ");
+            }else{
+                System.out.print("* ");
+                //calculating Inner spaces formula ( 2*(n-row)-3)
+                for(int j = 1 ; j<= 2*(n-row)-3 ; j++){
+                    System.out.print("  ");
+                }
+                System.out.print("* ");
+            }
+            System.err.println();
+        }
+    }
+}
