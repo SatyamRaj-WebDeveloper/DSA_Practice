@@ -270,7 +270,19 @@ class NumericThird{
         int n = 5;
         for(int row = 1 ; row <= n ; row++){
             for(int col = 1 ; col<= row ; col++){
-                System.out.print((char)(64+col) + " ");
+                System.out.print((char)(('A'-1)+col) + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+class NumericFourth{
+    public static void main(String[] args) {
+        int n = 5;
+        for(int row = 1 ; row <= n ; row++){
+            for(int col = 1 ; col<= row ; col++){
+                System.out.print((char)(n-col+'A') + " ");
             }
             System.out.println();
         }
