@@ -198,3 +198,43 @@ class HollowDiamond{
         }
     }
 }
+
+//Solid Butterfly Pattern
+class SolidButterfly{
+    public static void main(String[] args) {
+        int n = 4;
+        //Upper Part 
+        for(int row = 1 ;row <= n ;row++){
+            //star Printing
+            for(int col = 1 ;col <= row;col++){
+                System.out.print("* ");
+            }
+            //space Printing
+            for(int col = 1 ; col <= 2*(n-row) ; col++){
+                System.out.print("  ");
+            }
+            //star Printing
+            for(int col = 1 ;col <= row;col++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        //Lower Part 
+        for( int row = 1 ; row <= n ; row++){
+            //star Printing
+            for(int col = 1 ; col <= n-row+1 ; col++){
+                System.out.print("* ");
+            }
+            //Space Calculation
+            for(int col = 1 ; col<= 2*row-2 ; col++){
+                System.out.print("  ");
+            }
+            //star Printing 
+            for(int col = 1 ; col <= n-row+1 ; col++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        
+    }
+}
