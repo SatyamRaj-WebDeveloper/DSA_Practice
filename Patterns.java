@@ -288,3 +288,24 @@ class NumericFourth{
         }
     }
 }
+
+class NumericPyramid{
+    public static void main(String[] args) {
+        int n = 4;
+        for(int row = 1; row <= n ; row++){
+            //Space Printing
+            for(int sp = 1 ; sp <= n-row ; sp++){
+                System.out.print("  ");
+            }
+            for(int col = 1 ; col<= row ; col++){
+                System.out.print(col +" ");
+            }
+            if(row != 1){
+                for(int col = row -1 ; col > 0 ; col--){
+                    System.out.print(col+" ");
+                }
+            }
+            System.err.println();
+        }
+    }
+}
