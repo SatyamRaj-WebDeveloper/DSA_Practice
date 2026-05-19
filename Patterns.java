@@ -219,7 +219,7 @@ class SolidButterfly{
             }
             System.out.println();
         }
-        //Lower Part 
+        //Lower Part (Inverted Symmetrical Half)
         for( int row = 1 ; row <= n ; row++){
             //star Printing
             for(int col = 1 ; col <= n-row+1 ; col++){
@@ -236,5 +236,18 @@ class SolidButterfly{
             System.out.println();
         }
         
+    }
+}
+
+//NUMERICAL PATTERNS
+class NumericFirst{
+    public static void main(String[] args) {
+        int n = 5;
+        for(int row = 1 ; row<= n ;row++){
+            for(int col = 1 ; col<=row ;col++){
+                System.out.print(col+" ");
+            }
+            System.out.println();
+        }
     }
 }
