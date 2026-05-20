@@ -319,13 +319,34 @@ class NumericPyramid2{
             for(int sp = 1 ; sp <= n-row ; sp++){
                 System.out.print("  ");
             }
-            for(int col = 1 ; col <= row ; col++){
+            for(int col = 1; col <= 2*row-1; col++){
                 System.out.print(row+" ");
             }
-            if(row != 1){
-                for(int col = 1 ; col<row ; col++){
-                System.out.print(row+" ");
-               }
+            System.err.println();
+        }
+    }
+}
+
+class NumericAlpha{
+    public static void main(String[] args) {
+        int n = 4 ;
+        for( int row = 1 ; row<= n ; row++){
+            // Space Printing
+            for(int sp = 1 ; sp<= n-row ; sp++){
+                System.out.print("  ");
+            }
+            // To Print the left half of the Pattern 
+            for(int col = 1 ; col <= row ;col++){
+                System.out.print((char)('A'-1 + col)+" ");
+            }
+            /*to Print the right half of the Pattern 
+             Since the right half is not always starting with A 
+             therefore , the formula (char)(row + 'A' -2 ) */
+            char toPrint = (char)(row + 'A' -2);
+            for(int col = 1 ; col<=row-1 ; col++){
+                    System.out.print(toPrint+" ");
+                    //Needs to be decremented since going backwards 
+                    toPrint--;
             }
             System.err.println();
         }
