@@ -43,3 +43,16 @@ class ArrayMulti{
         System.out.print(mul);
     }
 }
+
+//Find Max in Array
+class FindMax{
+    public static void main(String[] args) {
+        int arr[]={10,50,2,6,70,3,45};
+        int max = 0;
+        for(int val : arr){
+            if(val  > max)
+            max = val;
+        }
+        System.out.print(max);
+    }
+}
