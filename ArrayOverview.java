@@ -61,8 +61,10 @@ class FindMax{
 class TwoDimensionalArray{
     public static void main(String[] args) {
         int arr[][] = { {1,2} , {2,3,4,5,6} , {4,5,6,78,9,15,20} , {5}};
+        //Row Length
         int rowLength = arr.length;
         for(int rowIndex = 0 ; rowIndex <= rowLength-1 ; rowIndex++){
+            //To Calculate the column Length for variable size 
             int colLength = arr[rowIndex].length;
             for(int j =0 ; j<=colLength-1 ; j++){
                 System.out.print(arr[rowIndex][j]+" ");
