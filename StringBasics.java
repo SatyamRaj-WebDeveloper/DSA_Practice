@@ -88,3 +88,14 @@ class CountVowels{
         System.err.println(cnt);
     }
 }
+
+class ReverseString{
+    public static void main(String[] args) {
+        String name = "Love";
+        String new_string = "";
+        for( int i = name.length()-1 ; i >= 0 ; i--){
+            new_string += name.charAt(i);
+        }
+        System.err.println(new_string);
+    }
+}
