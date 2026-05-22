@@ -76,3 +76,15 @@ class FindStringLength{
         System.err.print(cnt);
     }
 }
+
+class CountVowels{
+    public static void main(String[] args) {
+        String name = "LOVE";
+        int cnt =0;
+        for(char ch : name.toCharArray()){
+            if( ch == 'A'||  ch =='E' || ch == 'I' || ch =='O' || ch =='U')
+            cnt++;
+        }
+        System.err.println(cnt);
+    }
+}
