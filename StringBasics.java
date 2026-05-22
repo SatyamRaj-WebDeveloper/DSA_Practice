@@ -57,3 +57,11 @@ class StringComparisons{
 }
 
 //Practice Questions
+class PrintChar{
+    public static void main(String[] args) {
+        String name = "Babbar";
+        for(int i = 0 ; i<name.length() ; i++){
+            System.err.println(name.charAt(i));
+        }
+    }
+}
