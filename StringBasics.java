@@ -65,3 +65,14 @@ class PrintChar{
         }
     }
 }
+
+class FindStringLength{
+    public static void main(String[] args) {
+        String name = "Love Babbar";
+        int cnt = 0;
+        for(char ch : name.toCharArray()){
+            cnt++;
+        }
+        System.err.print(cnt);
+    }
+}
