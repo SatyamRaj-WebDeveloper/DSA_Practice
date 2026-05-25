@@ -43,3 +43,20 @@ class Armstrong{
         }
     }
 }
+
+class PerfectNum{
+    public static void main(String[] args) {
+        int sum = 1 , num = 6;
+        for(int  i = 2 ; i*i <= num ; i++){
+            if( num %i == 0){
+                int firstFactor = i;
+                int secondFactor = num/i;
+                sum += firstFactor+secondFactor;
+            }
+        }
+        if(sum == num)
+        System.err.println("Perfect Number");
+        else
+        System.err.println("Not Perfect Number");
+    }
+}
