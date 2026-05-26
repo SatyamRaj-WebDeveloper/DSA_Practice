@@ -23,6 +23,7 @@ public class Student{
     }
 
     public static void main(String[]args) {
+        //Object of the Class Student
         Student A = new Student();
         A.id = 1 ;
         A.name = "Ramesh";
@@ -33,5 +34,10 @@ public class Student{
         System.err.println(A.age);
         System.err.println(A.id);
         System.err.println(A.nos);
+        
+        //Method Calling
+        A.bunk();
+        A.sleep();
+        A.sleep();
     }
 }
