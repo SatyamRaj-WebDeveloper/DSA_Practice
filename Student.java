@@ -10,6 +10,12 @@ public class Student{
     public Student(){
         System.out.println("Student Default Constructor Called");
     }
+    public Student(int id , int age , String name ,  int nos){
+        this.name = name;
+        this.age = age;
+        this.nos = nos;
+        this.id = id;
+    }
 
     //Methods
     public void study(){
@@ -24,20 +30,26 @@ public class Student{
 
     public static void main(String[]args) {
         //Object of the Class Student
-        Student A = new Student();
-        A.id = 1 ;
-        A.name = "Ramesh";
-        A.nos = 5;
-        A.age = 16;
+        // Student A = new Student();
+        // A.id = 1 ;
+        // A.name = "Ramesh";
+        // A.nos = 5;
+        // A.age = 16;
 
-        System.err.println(A.name);
-        System.err.println(A.age);
-        System.err.println(A.id);
-        System.err.println(A.nos);
+        // System.err.println(A.name);
+        // System.err.println(A.age);
+        // System.err.println(A.id);
+        // System.err.println(A.nos);
         
-        //Method Calling
-        A.bunk();
-        A.sleep();
-        A.sleep();
+        // //Method Calling
+        // A.bunk();
+        // A.sleep();
+        // A.sleep();
+
+        //PARAMETERIZED CONSTRUCTOR
+        Student A = new Student(1,16,"Ramu" , 8);
+        System.out.println(A.name);
+        System.out.println(A.age);
+        System.out.println(A.nos);
     }
 }
