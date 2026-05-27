@@ -1,3 +1,5 @@
+//CLASSES AND OBJECTS IN JAVA
+
 public class Student{
     //Attributes
     public int id;
@@ -53,3 +55,49 @@ public class Student{
         System.out.println(A.nos);
     }
 }
+
+
+
+//FIRST PILLAR OF OOPS --> ENCAPSULATION
+/* Encapsulation binds data and mehthods in a class
+Like a Capsule , it combines and binds them together */
+
+/* Encapsulation provides a Security Layer , Hides Ineternal implementation of code and data in a class
+Exposes only necessary information to the external world*/
+
+
+//SECOND PILLAR OF OOPS --> INHERITENCE
+//Use Inheritence whenever an IS-A relationship is identified between Objects
+/*Inheritence is applied where objects exhibit a hierarichal relationship , signifying a
+specialized-generalized connection*/
+//Do not Reinvent the Wheel 
+/* Example - Animal Hierarchy
+   1. Base Class : Animal
+   2. Derived Class : Mammal , Reptile , Bird
+   3. Explanation : Mammals , reptiles,and birds are all types of animals , forming 
+      an IS-A relationship*/
+
+//PROTECTED MEMBERS:
+/* 1 . Members declared protected are accessible within the class itself and to its derives class
+      But still acts as Private ( i.e needs getters and setters for access)
+   2. The protected access modifiers serves two primary purposes:
+      A. Encapsulation : Like the private modifer , protected provides a level of encapsulation , ensuring 
+         that certain class members are not directly accessible from outside the class . This promotes data hiding
+         and prevents external code from modifying or accessing sensitive data directly
+      B. Inheritence : Unlike private , protected members can be inherited by derived classes , This means that subclasses 
+         have limited access to these members , allowing them to build upon the base class's functionality while maintaining 
+         some level of data integriy and control.*/
+
+//Types of Inheritence 
+/* 1. Single Inheritence
+   2. Multiple Inheritence --> Not Supported In Java (Directly)
+   3. Hierarichal Inheritence
+   4. Multi-Level Inheritence 
+   5. Hybrid Inheritence */
+
+//ADVANTAGES
+  /* 1. Reusability
+     2. Code modification
+     3. Extensibility
+     4. Data hiding 
+  */
