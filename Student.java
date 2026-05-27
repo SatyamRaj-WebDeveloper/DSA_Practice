@@ -101,3 +101,10 @@ specialized-generalized connection*/
      3. Extensibility
      4. Data hiding 
   */
+
+// IMPLEMENTING INHERITENCE IN JAVA
+/* 1. Unlike C++ , JAVA dosen't provide an inheritence specifier like public , protected or private .
+      i.e , you can not specify mode of Inheritence 
+   2. Java does not support multiple Inheritence */
+
+//Code Example of INHERITENCE --> Transport folder --> Vehicle.java
