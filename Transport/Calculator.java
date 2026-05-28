@@ -31,23 +31,30 @@ class shape{
     }
 }
 class Rectangle extends shape{
-    //METHOD OVERRIDING --> Runtime Polymorphism
+    //METHOD OVERRIDING 
     public void draw(){
         System.out.println("Drawing Rectangle");
     }
 }
 
 class Circle extends shape{
-    //METHOD OVERRIDING --> Runtime Polymorphism 
+    //METHOD OVERRIDING  
     public void draw(){
         System.out.println("Drawing Circle");
     }
+
     public static void main(String[] args) {
         Circle c = new Circle();
-        c.draw();
+        dodrawing(c);
         Rectangle rec = new Rectangle();
-        rec.draw();
+        dodrawing(rec);
         shape sh =  new shape();
-        sh.draw();
+        dodrawing(sh);
     }
+    /*this dodrawing() method actually allows us to implement Runtime Polymorphism accepts the object and call the method draw() 
+       on that Object */
+    public static void dodrawing(shape s){
+        s.draw();
+    }
+    
 }
