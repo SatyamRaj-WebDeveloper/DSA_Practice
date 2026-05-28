@@ -141,3 +141,19 @@ specialized-generalized connection*/
                               that is already defined in its superclass.
     2. Dynamic Method Dispatch[Upcasting]:- A superclass reference variable can refer to a 
                                subclass object and dynamic dispatch is used to resolve the called method at runtime */
+
+//FOURTH PILLAR OF OOPS --> ABSTRACTION
+
+/* Delivering only the essential information to the outer world while masking the background details*/
+// It is a design and programming method that seperates the interface from the implementation
+
+/* Abstraction using Classes:- 
+    1. Grouping data members and member functions into classes using access specifiers.
+    2. A class can choose which data members are visible to the outside world and which are hidden */
+
+//What is Abstract Class ?
+/* An Abstract class in Java is a class that cannot be instantiated on its own and is designed to be subclassed .
+   It can serve as a superclass for other classes that share a common structure or behaviour. */ 
+/* An abstract class in Java delivers abstraction by serving as a template for its subclasses , allowing for the definition of a common 
+   interface without specifiying the complete implementation details */ 
+/* It has come from the idea of Abstraction*/
