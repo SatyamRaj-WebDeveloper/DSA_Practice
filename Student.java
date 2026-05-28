@@ -108,3 +108,36 @@ specialized-generalized connection*/
    2. Java does not support multiple Inheritence */
 
 //Code Example of INHERITENCE --> Transport folder --> Vehicle.java
+
+
+
+//THIRD PILLAR OF OOPS --> POLYMORPHISM
+
+// A phenomenon that allows an object to have several different forms and behaviours 
+// Two Types:- 
+    // 1. Compile Time Polymorphism (Static Polymorphism)
+    // 2. RunTime Polymorphism
+
+/* METHOD OVERLOADING --> Overloading occurs when a class contains multiple methods sharing 
+                           a name but different in argument count or argument type*/
+         
+     /* Ex -  class calculator{
+            int add (int a , int b){
+                return a+b;
+            }
+            int add(int a , int b , int c){
+                return a+b+c;
+            }
+         } */
+
+    //Method Overloading Code Example --> Transport Package --> Calculator.java
+
+/* Operator Overloading --> Java does not support user-defined operator Overloading but internally 
+                            overloads certain operators( e.g - + for String concatenation and integer addition)*/
+
+
+/* Runtime Polymorphism :
+    1. Function Overriding :- A subclass can provide a specific implementation of a method 
+                              that is already defined in its superclass.
+    2. Dynamic Method Dispatch[Upcasting]:- A superclass reference variable can refer to a 
+                               subclass object and dynamic dispatch is used to resolve the called method at runtime */
