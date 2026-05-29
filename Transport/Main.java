@@ -1,33 +1,37 @@
 //This is an Abstract Class --> Cannot be Instantiated --> Object Cannot be created
-abstract class Bird{
-    abstract void fly();
-    abstract void eat();
+// abstract class Bird{
+//     abstract void fly();
+//     abstract void eat();
+// }
+interface  Bird{
+    void fly();
+    void eat();
 }
 
-class sparrow extends Bird{
+class sparrow implements  Bird{
     //If we extend any Abstract Class we need to define the abstract method in that Abstract Class
     //Override the fly() method
     @Override
-    void fly(){
+    public void fly(){
         System.out.println("Sparrow Flew");
     }
     //Override the eat() method
     @Override
-    void eat(){
+    public void eat(){
         System.out.println("Sparrow ate");
     }
 
 }
-class Crow extends Bird{
+class Crow implements  Bird{
     //If we extend any Abstract Class we need to define the abstract method in that Abstract Class
     //Override the fly() method
     @Override
-    void fly(){
+    public void fly(){
         System.out.println("Crow Flew");
     }
     //Override the eat() method
     @Override
-    void eat(){
+    public void eat(){
         System.out.println("Crow ate");
     }
 
