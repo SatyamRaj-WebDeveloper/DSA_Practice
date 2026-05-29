@@ -5,6 +5,7 @@ abstract class Bird{
 }
 
 class sparrow extends Bird{
+    //If we extend any Abstract Class we need to define the abstract method in that Abstract Class
     //Override the fly() method
     @Override
     void fly(){
@@ -17,10 +18,28 @@ class sparrow extends Bird{
     }
 
 }
+class Crow extends Bird{
+    //If we extend any Abstract Class we need to define the abstract method in that Abstract Class
+    //Override the fly() method
+    @Override
+    void fly(){
+        System.out.println("Crow Flew");
+    }
+    //Override the eat() method
+    @Override
+    void eat(){
+        System.out.println("Crow ate");
+    }
+
+}
 public class Main{
        public static void main(String[] args) {
            Bird sp= new sparrow();
            sp.fly();
            sp.eat();
+
+           sp = new Crow();
+           sp.eat();
+           sp.fly();
        }
 }
