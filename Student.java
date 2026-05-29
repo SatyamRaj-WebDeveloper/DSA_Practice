@@ -141,6 +141,8 @@ specialized-generalized connection*/
                               that is already defined in its superclass.
     2. Dynamic Method Dispatch[Upcasting]:- A superclass reference variable can refer to a 
                                subclass object and dynamic dispatch is used to resolve the called method at runtime */
+    
+//CODE EXAMPLE FOR POLYMORPHISM ---> Transport(Packeage) ---> Calculator.java
 
 //FOURTH PILLAR OF OOPS --> ABSTRACTION
 
@@ -157,3 +159,12 @@ specialized-generalized connection*/
 /* An abstract class in Java delivers abstraction by serving as a template for its subclasses , allowing for the definition of a common 
    interface without specifiying the complete implementation details */ 
 /* It has come from the idea of Abstraction*/
+
+// DESIGN STRATERGY 
+/* 1. Abstraction divides code into two categories : interface and implementation. So, when creating your component , keep the iterface
+      seperate from the implementation so that if the underlying implementation changes , the Interface stays the same.
+   2. In this instance , any program that uses these interfaces would remain unaffected and would require recompilation with the most recent
+      implementation
+   3. Makes code modular and maintainable */
+
+//CODE EXAMPLE FOR ABSTRACTION ---> Transport (Package) ---> Main.java

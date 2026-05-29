@@ -1,4 +1,4 @@
-
+// POLYMORPHISM EXAMPLE
 public class Calculator{
     // COMPILE TIME POLYMORPHISM
     int add(int a , int b){
@@ -51,6 +51,7 @@ class Circle extends shape{
         shape sh =  new shape();
         dodrawing(sh);
     }
+    //Dynamic Method Dispatch --> Upcasting
     /*this dodrawing() method actually allows us to implement Runtime Polymorphism accepts the object and call the method draw() 
        on that Object */
     public static void dodrawing(shape s){
