@@ -60,18 +60,30 @@ class QueueBasics{
          poll() to return and remove the head of queue , 
          peek() to return the head of the queue*/
         Queue<Integer> q =  new LinkedList<>();
-        // Deque<Integer> dq = new ArrayDeque<Integer>();
+        Deque<Integer> dq = new ArrayDeque<Integer>();
         
-        q.add(10);
-        q.add(20);// add() --> returns exception if fails to add.
-        q.offer(30);//offer --> is prefered because add() return exception if fails , but offer() does not
-        q.offer(50);
-        q.offer(90);
-        q.offer(100);
-        System.out.println(q);
-        q.remove();
-        System.out.println(q);
-        System.out.println(q.poll());
-        System.out.println(q);
+        dq.offerFirst(50);
+        dq.offerFirst(80);
+        dq.offerFirst(60);
+        dq.offerFirst(200);
+        dq.offerFirst(70);
+        System.out.println(dq);
+        dq.pollFirst();
+        System.out.println(dq);
+        dq.pollLast();
+        System.out.println(dq);
+        System.out.println(dq.size());
+        System.out.println(dq.peek());
+        // q.add(10);
+        // q.add(20);// add() --> returns exception if fails to add.
+        // q.offer(30);//offer --> is prefered because add() return exception if fails , but offer() does not
+        // q.offer(50);
+        // q.offer(90);
+        // q.offer(100);
+        // System.out.println(q);
+        // q.remove();
+        // System.out.println(q);
+        // System.out.println(q.poll());
+        // System.out.println(q);
     }
 }
