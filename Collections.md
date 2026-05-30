@@ -51,3 +51,23 @@
    CREATION: Stack<Integer> st = new Stack<>();
 
    Some Stack Specific Methods:- push(),pop(),peek(),search(),empty()
+
+## QUEUE INTERFACE (ArrayDeque , LinkedList , PriorityQueue implements Queue Interface)
+     CREATION:
+           1. Queue<String>animal1 = new LinkedList<>()
+           2. Queue<String>animal2 = new ArrayDeque<>();
+           3. Queue<String>animal3 = new PriorityQueue<>();
+     METHODS :
+        add() , offer() , elements() , peek() , remove() ; poll()
+  
+  1. PRIORITYQUEUE
+     CREATION : Queue<Integer> pq = new PriorityQueue<>() --> minheap
+                Normally it works as minheap in case of Integers i.e smallest value has highest priority.
+     CREATION : Queue<Integer> pq = new PriorityQueue<>((a,b)->b-a) --> maxheap
+                This creation works as maxHeap i.e largest value as highest priority
+
+  2. DEQUE
+     CREATION : Queue<Integer> dg = new ArrayDeque<>();
+                Double ended queue
+  3. QUEUE
+     CREATION : Queue<Integer> dg = new LinkedList<>();
