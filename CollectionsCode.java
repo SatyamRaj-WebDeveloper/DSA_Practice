@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 class Collections{
     public static void main(String[] args) {
@@ -32,12 +30,25 @@ class Collections{
         // System.out.println(arl);
         
         //List Traversal using Iterator
-        Iterator<Integer> itr = arl.iterator();
-        while(itr.hasNext()){
-            System.out.println("ELement :" + itr.next());
-        }
+        // Iterator<Integer> itr = arl.iterator();
+        // while(itr.hasNext()){
+        //     System.out.println("ELement :" + itr.next());
+        // }
+        
+        LinkedList<Integer> linkList = new LinkedList<>();
+        linkList.add(40);
+        linkList.add(30);
+        linkList.add(10);
+        linkList.add(80);
 
-
+        //addFirst() and addLast()
+        linkList.addFirst(100);
+        linkList.addLast(90);
+        System.out.println(linkList);
+        
+        System.out.println(linkList.poll());
+        linkList.offer(3); // offer() adds element to the last of the list 
+        System.out.println(linkList);
 
     }
 }
