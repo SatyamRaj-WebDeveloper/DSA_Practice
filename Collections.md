@@ -34,7 +34,7 @@
    -->Data - stores the actual Data 
    
    CREATION: LinkedList<Integer> linkedlist = new LinkedList<>()
-   # LinkedList as Queue & Deque:
+   ### LinkedList as Queue & Deque:
        addFirst() , addLast() , getFirst() , getLast() , removeFirst() , removeLast() , peek() , poll() , offer()
     
 3. VECTOR (All Methods of List Interface included )
@@ -44,3 +44,10 @@
    --> However , in array lists , methods are not synchronized . Instead , it uses the Collections.synchronizedList() method that synchronizes the list as a whole
    
    --> It is recommended to use ArrayList in place of Vector because vectors are less efficient.
+
+4. STACK (Follows LIFO Ordering  , includes all the methods of List Interface)
+   --> Java Collection Framework has a class named Stack that provides the functionality of the stack data structure. Stack class extends the Vector Class.
+
+   CREATION: Stack<Integer> st = new Stack<>();
+
+   Some Stack Specific Methods:- push(),pop(),peek(),search(),empty()
