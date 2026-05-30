@@ -61,19 +61,35 @@ class QueueBasics{
          peek() to return the head of the queue*/
         Queue<Integer> q =  new LinkedList<>();
         Deque<Integer> dq = new ArrayDeque<Integer>();
+        Queue<Integer> pq = new PriorityQueue<Integer>();
         
-        dq.offerFirst(50);
-        dq.offerFirst(80);
-        dq.offerFirst(60);
-        dq.offerFirst(200);
-        dq.offerFirst(70);
-        System.out.println(dq);
-        dq.pollFirst();
-        System.out.println(dq);
-        dq.pollLast();
-        System.out.println(dq);
-        System.out.println(dq.size());
-        System.out.println(dq.peek());
+        //default behaviour --> Integers -> Less Value -> High Priority --> minheap
+        //maxheap --> Integers --> high value --> highPriorioty
+        /* To create a maxHeao :
+           Queue<Integer>pq = new PriorityQueue<>((a,b)->b-a); */
+        pq.offer(40);
+        pq.offer(50);
+        pq.offer(20);
+        pq.offer(90);
+        
+        System.out.println(pq);
+        System.out.println(pq.poll()); // 20 will be removed and returned 
+        System.out.println(pq);
+        System.out.println(pq.poll()); // 40 will be removed and returned 
+        System.out.println(pq);
+        
+        // dq.offerFirst(50);
+        // dq.offerFirst(80);
+        // dq.offerFirst(60);
+        // dq.offerFirst(200);
+        // dq.offerFirst(70);
+        // System.out.println(dq);
+        // dq.pollFirst();
+        // System.out.println(dq);
+        // dq.pollLast();
+        // System.out.println(dq);
+        // System.out.println(dq.size());
+        // System.out.println(dq.peek());
         // q.add(10);
         // q.add(20);// add() --> returns exception if fails to add.
         // q.offer(30);//offer --> is prefered because add() return exception if fails , but offer() does not
