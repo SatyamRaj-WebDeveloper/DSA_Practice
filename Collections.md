@@ -89,4 +89,20 @@ METHODS -> add() , addAll() , iterator() , remove() , removeAll() , retainAll(),
    --> Timt Complexity : O(n)
 
 3. TREESET ---> Orderd and Sorted 
+
+## QUEUE INTERFACE --> FITO ( First in First Out ) Principle
+    **Note:**  In case of Priority Queue FIFO Principle does not works , There Priority matters
+
+
+
+## MAP INTERFACE 
+   --> Elements of Map are stored in key/value pairs . Keys are unique values associated with indivisual Values . A map cannot contain duplicate keys . And , each key is associated with a single value.
+
+   CONCRETE CLASS IN MAP INTERFACE - HashMap, TreeMap,EnumMap,LinkedHashMap,WeakHashMap
    
+   CHARACTERSTICS OF MAP :
+     1. No Duplicate Keys - each key maps to one value
+     2. Key-Value Association - maintains an association of keys to values
+     3. Implementations - HashMap , TreeMap , LinkedHashMap , HashTable
+     4. Order - does not guarantee any specific order of its elements
+     5. Null Values - Allows Null Values , depending on the Implementation , null Keys.
