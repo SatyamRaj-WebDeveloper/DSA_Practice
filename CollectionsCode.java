@@ -103,3 +103,21 @@ class QueueBasics{
         System.out.println(q);
     }
 }
+
+class SetBasics{
+    public static void main(String[] args) {
+        Set<Integer> set = new HashSet<>();
+        Set<Integer> set1 = new LinkedHashSet<>();
+        Set<Integer> set2 = new TreeSet<>();
+        /* HashSet --> Unordered and Unsorted
+           LinkedHashSet --> Ordered and Unsorted
+           TreeSet --> Ordered and Sorted */
+        set.add(10);
+        set.add(10); // duplicate elements are not allowed
+        set.add(20);
+        set.add(30);
+        set.add(40);
+        set.add(50);
+        System.out.println(set);
+    }
+}
