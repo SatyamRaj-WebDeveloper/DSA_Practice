@@ -121,3 +121,22 @@ class SetBasics{
         System.out.println(set);
     }
 }
+
+class MapBasics{
+    public static void main(String[] args) {
+        Map<Integer,String> map = new HashMap<>();
+        Map<Integer,String> map1 = new LinkedHashMap<>();
+        Map<Integer,String> map2 = new TreeMap<>();
+        // Map<Integer,String> map3 = new HashTable<>();
+        /* HashMap --> Unordered and Unsorted
+           LinkedHashMap --> Ordered and Unsorted
+           TreeMap --> Ordered and Sorted */
+        map.put(1,"A");
+        map.put(1,"A1"); // duplicate keys are not allowed , it will override the previous value
+        map.put(2,"B");
+        map.put(3,"C");
+        map.put(4,"D");
+        map.put(5,"E");
+        System.out.println(map);
+    }
+}
