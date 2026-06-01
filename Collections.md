@@ -71,3 +71,15 @@
                 Double ended queue
   3. QUEUE
      CREATION : Queue<Integer> dg = new LinkedList<>();
+
+##SET INTERFACE
+   The set Interface of the Java Collection framework provides the features of the mathematical set in Java.It extends the collection interface .Unlike the List Interface , sets cannot contain duplicate elements
+
+Concrete Classes under set Interface -> EnumSet , HashSet , LinkedHashSet , TreeSet
+
+METHODS -> add() , addAll() , iterator() , remove() , removeAll() , retainAll(),clear() , size() , toArray() , contains() , containsAll() , hashCode()
+
+1. HASHSET --> Unordered and Unsorted 
+   In Java , HashSet is commonly used if we have to access elements randomly . It is becuase elements in a hash table are accessed using hash codes .
+   The hashCode of an element is a unique identity that helps to identify the element in a hash table.
+   HashSet cannot contain duplicate elements .Hence, each hash set element has a unique hashcode.
