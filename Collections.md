@@ -110,3 +110,13 @@ METHODS -> add() , addAll() , iterator() , remove() , removeAll() , retainAll(),
    MAP METHODS :
      put() , putAll() , putIfAbsent(k,v) , get(k) , getOrDefault(k) , containsKey(k) , containsValue(V) , replace(K,V) , replace(K , oldValue , newValue) , 
      remove(K) , remove(K,V) , KeySet() , values() , entrySet()
+
+## COMPARATORS
+   Usually we create a sepearte Comparator Class and Use it wherever needed 
+   Example:
+   public class WeigthComparator implements Comparator<Student>{
+      @Override 
+      public int compare (Student o1 , Student o2){
+         return o1.weight - o2.weight;
+      }
+   }
