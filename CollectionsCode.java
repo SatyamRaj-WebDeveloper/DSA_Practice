@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Collections{
+class Collection{
     public static void main(String[] args) {
         //3 ways to create an ArrayList<>();
          ArrayList<Integer> arl = new ArrayList<>();
@@ -128,9 +128,9 @@ class MapBasics{
         Map<Integer,String> map1 = new LinkedHashMap<>();
         Map<Integer,String> map2 = new TreeMap<>();
         // Map<Integer,String> map3 = new HashTable<>();
-        /* HashMap --> Unordered and Unsorted
-           LinkedHashMap --> Ordered and Unsorted
-           TreeMap --> Ordered and Sorted */
+        /* HashMap --> Unordered and Unsorted , T.C - O(1)
+           LinkedHashMap --> Ordered and Unsorted , T.C - O(n)
+           TreeMap --> Ordered and Sorted , T.C - O(logn) */
         map.put(1,"A");
         map.put(1,"A1"); // duplicate keys are not allowed , it will override the previous value
         map.put(2,"B");
@@ -142,4 +142,22 @@ class MapBasics{
             System.out.println(entry.getKey() + " " + entry.getValue());
     }
 }
+}
+
+class ComparatorBasics{
+    public static void main(String[] args) {
+        List<Integer> list = new ArrayList<>();
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+        list.add(50);
+
+        Collections.sort(list,new Comparator<Integer>(){
+            public int compare(Integer a,Integer b){
+                return b-a;
+            }
+        });
+        System.out.println(list);
+    }
 }
