@@ -137,6 +137,9 @@ class MapBasics{
         map.put(3,"C");
         map.put(4,"D");
         map.put(5,"E");
-        System.out.println(map);
+        // System.out.println(map);
+        for(Map.Entry<Integer,String>entry : map.entrySet()){
+            System.out.println(entry.getKey() + " " + entry.getValue());
     }
+}
 }
