@@ -106,3 +106,7 @@ METHODS -> add() , addAll() , iterator() , remove() , removeAll() , retainAll(),
      3. Implementations - HashMap , TreeMap , LinkedHashMap , HashTable
      4. Order - does not guarantee any specific order of its elements
      5. Null Values - Allows Null Values , depending on the Implementation , null Keys.
+
+   MAP METHODS :
+     put() , putAll() , putIfAbsent(k,v) , get(k) , getOrDefault(k) , containsKey(k) , containsValue(V) , replace(K,V) , replace(K , oldValue , newValue) , 
+     remove(K) , remove(K,V) , KeySet() , values() , entrySet()
