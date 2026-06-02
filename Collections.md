@@ -120,3 +120,14 @@ METHODS -> add() , addAll() , iterator() , remove() , removeAll() , retainAll(),
          return o1.weight - o2.weight;
       }
    }
+   OR
+   public class WeigthComparator implements Comparator<Student>{
+      @Override 
+      public int compare (Student o1 , Student o2){
+         return Integer.compare(o1.weight - o2.weight);
+      }
+   }
+   OR USING LAMBDA EXPRESSION 
+   Collections.sort(Students , (o1,o2)-> o1.weight - o2.weight);
+
+   Here , Student is a Custom class with some attributes such as name , age , weight , etc.
