@@ -9,11 +9,18 @@ public class Bitwise{
         // System.out.println("a << b = " + (a << b)); // 320
         // System.out.println("a >> b = " + (a >> b)); // 0
         // System.out.println("a >>> b = " + (a >>> b)); // 0
-
+        // Left Shift Operator ( << ) number gets multiplied by 2 ( num << i --> num * 2^i)
         int n = 1 ;
         for( int i = 0 ; i <= 34 ; i++){
             n = n << 1;
             System.err.println(n);
+            System.err.println();
+        }
+        // Right Shift Operator ( >> ) number gets divided by 2 ( num >> i --> num / 2^i)
+        int m = 100;
+        for(int i = 0 ; i<=10 ;i++){
+            m = m >> 1;
+            System.err.println(m);
             System.err.println();
         }
     }
