@@ -23,5 +23,29 @@ public class Bitwise{
             System.err.println(m);
             System.err.println();
         }
+
+
+    }
+}
+
+class CheckEvenOdd{
+    public static void main(String[] args) {
+        int n = 10;
+        if((n & 1) == 0){
+            System.err.println("Even");
+        }else{
+            System.err.println("Odd");
+        }
+    }
+}
+
+class CheckPowerOfTwo{
+    public static void main(String[] args) {
+        int n = 16;
+        if((n & (n-1)) == 0){
+            System.err.println("Power of Two");
+        }else{
+            System.err.println("Not a Power of Two");
+        }
     }
 }
