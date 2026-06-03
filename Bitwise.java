@@ -23,8 +23,8 @@ public class Bitwise{
             System.err.println(m);
             System.err.println();
         }
-
-
+        int x = 10;
+        System.out.println(n &(n-1)); // --> removes last set bit of a number , ans = 8
     }
 }
 
@@ -59,5 +59,17 @@ class SwapTwoNumbers{
         a = a ^ b;
         System.err.println("a = " + a);
         System.err.println("b = " + b);
+    }
+}
+
+class CountSetBits{
+    public static void main (String[] args){
+        int n = 4 , count  = 0;
+        while( n>0){
+            if((n & 1 )== 1)
+            count++;
+        n = n>> 1;
+        }
+        System.out.println(count);
     }
 }
