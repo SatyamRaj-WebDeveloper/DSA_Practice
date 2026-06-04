@@ -37,6 +37,8 @@ class Multiply{
 }
 
 class findElement{
+    //Time Complexity --> O(n)
+    //Spce Complexity --> O(1)
     static boolean FindElementLinear(int arr[] ,  int val){
         for(int num : arr){
             if(num == val)
@@ -47,5 +49,22 @@ class findElement{
 
     public static void main(String[] args){
         System.out.println(FindElementLinear(new int[]{1,2,3,5,6} , 4));
+    }
+}
+
+class findMax{
+    //Time Complexity  --> O(n)
+    //Space Complexity  --> O(1)
+    static int FindMaxElement(int arr[]){
+        int max = arr[0];
+        for(int num : arr){
+            if(num > max)
+            max = num ;
+        }
+        return max;
+    }
+
+    public static void main(String[] args){
+        System.out.println(FindMaxElement(new int[]{1,8,96,5,100,4}));
     }
 }
