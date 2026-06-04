@@ -1,5 +1,5 @@
 import java.util.*;
-
+import java.util.Arrays;
 class Collection{
     public static void main(String[] args) {
         //3 ways to create an ArrayList<>();
@@ -152,6 +152,8 @@ class ComparatorBasics{
         list.add(30);
         list.add(40);
         list.add(50);
+
+        
 
         Collections.sort(list,new Comparator<Integer>(){
             public int compare(Integer a,Integer b){
