@@ -68,3 +68,23 @@ class findMax{
         System.out.println(FindMaxElement(new int[]{1,8,96,5,100,4}));
     }
 }
+
+class CalculateSum{
+    static int[] CalculateSumOfPositive(int arr[]){
+        int sumpos = 0 , sumneg = 0;
+        for(int num : arr){
+            if(num > 0)
+            sumpos += num;
+            else
+            sumneg += num;
+        }
+        return new int[]{sumpos , sumneg};
+    }
+
+    public static void main(String[]args){
+        int arr[] = CalculateSumOfPositive(new int[]{1,2,-4,-9,6,-2,5});
+        for(int num : arr){
+            System.out.print(num + " ,");
+        }
+    }
+}
