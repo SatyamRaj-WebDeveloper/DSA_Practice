@@ -35,3 +35,17 @@ class Multiply{
         }
     }
 }
+
+class findElement{
+    static boolean FindElementLinear(int arr[] ,  int val){
+        for(int num : arr){
+            if(num == val)
+            return true;
+        }
+        return false;
+    }
+
+    public static void main(String[] args){
+        System.out.println(FindElementLinear(new int[]{1,2,3,5,6} , 4));
+    }
+}
