@@ -164,3 +164,23 @@ class AlternateExtreme{
         }
     }
 }
+
+class ReverseArray{
+    static int[] ReverseAnArray(int arr[]){
+        int x = 0 , i =0 , j = arr.length-1;
+        while( i <= j){
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            i++;
+            j--;
+        }
+        return arr;
+    }
+    public static void main(String[]args){
+        int[]ans = ReverseAnArray(new int[]{1,2,3,4,5,6,7});
+        for(int num : ans){
+            System.out.print(num +" ");
+        }
+    }
+}
