@@ -88,3 +88,22 @@ class CalculateSum{
         }
     }
 }
+
+
+class ZeroAndOne{
+    static int[] CountZerosandOnes(int arr[]){
+        int zero = 0 , one =0;
+        for(int num : arr){
+            if(num == 0)
+            zero++;
+            else
+            one++;
+        }
+        return new int[]{zero , one};
+    }
+    public static void main(String[]args){
+        int arr[] = CountZerosandOnes(new int[]{0,0,0,1,1,1,1,1,0,1});
+        System.out.println("Zero Count : "+arr[0]);
+        System.out.println("One COunt : "+ arr[1]);
+    }
+}
