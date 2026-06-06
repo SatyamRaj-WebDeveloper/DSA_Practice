@@ -111,7 +111,7 @@ class ZeroAndOne{
 class UnsortedArray{
     static int findFirstElement(int arr[]){
         for(int i =0 ; i< arr.length ; i++){
-            if(arr[i+1] < arr[i])
+            if(arr[i+1] <= arr[i])
             return arr[i+1];
         }
         return -1;
@@ -120,5 +120,26 @@ class UnsortedArray{
     public static void main(String[] args){
         int ans = findFirstElement(new int[]{1,5,6,2,7,8,9,10});
         System.out.println(ans);
+    }
+}
+class InterSectionElement{
+    static int[] findIntersectionElement(int arr1[] , int arr2[]){
+         int x = 0 ;
+         int[]newarr = new int[arr1.length];
+         for(int i = 0; i < arr1.length ; i++){
+            for(int j = 0 ; j< arr2.length ;j++){
+                if(arr1[i] == arr2[j])
+                newarr[x++] = arr1[i];
+            }
+         }
+         return newarr;
+    }
+    public static void main(String[]args){
+        int ans[] = findIntersectionElement(new int[]{1,2,3,4,5} , new int[]{2,5,6,7,8});
+        for(int num : ans){
+           if(num > 0 ){
+            System.out.print(num +" ");
+           }
+        }
     }
 }
