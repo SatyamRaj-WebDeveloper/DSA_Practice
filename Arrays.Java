@@ -143,3 +143,24 @@ class InterSectionElement{
         }
     }
 }
+
+class AlternateExtreme{
+    static int[] findAlternateExtreme(int arr[]){
+        int[] ansarr = new int[arr.length];
+        int x = 0;
+        int i = 0 , j = arr.length-1;
+        while( i <= j){
+            ansarr[x++] = arr[i];
+            ansarr[x++] = arr[j];
+            i++;
+            j--;
+        }
+        return ansarr;
+    }
+    public static void main(String[]args){
+        int ans[] = findAlternateExtreme(new int[]{1,2,3,4,5,6});
+        for(int num : ans){
+            System.out.print(num +", ");
+        }
+    }
+}
