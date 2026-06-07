@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Arrays{
     //Time Complexity --> O(n)
     //Space Complexity --> O(1)
@@ -199,5 +201,30 @@ class ShitfArraybyOne{
         for(int num : ans){
             System.out.print(num + " ");
         }
+    }
+}
+
+class Mod{
+    static int findModOfArray(int arr[]){
+        HashMap<Integer,Integer> map = new HashMap<>();
+        for(int num : arr){
+            map.put(num  , map.getOrDefault(num , 0)+1);
+        }
+        // for(int i : map.keySet()){
+        //     System.out.println(i + "--> " + map.get(i));
+        // }
+        int maxfreq = -1;
+        int maxfreqKey = -1;
+        for( int key : map.keySet()){
+            if(map.get(key) > maxfreq){
+                maxfreq = map.get(key);
+                maxfreqKey = key;
+            }
+        }
+        return maxfreqKey;
+    }
+    public static void main(String[]args){
+        System.out.println(findModOfArray(new int[]{1,2,2,3,3,3,3,4,5,6,6,7}));
+        
     }
 }
