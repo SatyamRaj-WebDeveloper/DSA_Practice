@@ -228,3 +228,22 @@ class Mod{
         
     }
 }
+
+class Union{
+    static Set<Integer> printUnionOfArrays(int arr1[] , int arr2[]){
+        Set<Integer> st = new HashSet<>();
+        for(int num : arr1){
+            st.add(num);
+        }
+        for(int num : arr2){
+            st.add(num);
+        }
+        return st;
+    }
+    public static void main(String args[]){
+        Set<Integer> ansSet = printUnionOfArrays(new int[]{1,2,3,4,5} , new int[]{2,5,6,7});
+        for(int number : ansSet){
+            System.out.print(number+" ");
+        }
+    }
+}
