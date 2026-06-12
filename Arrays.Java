@@ -250,7 +250,7 @@ class Union{
 
 class SortArray{
     //Time Complexity --> O(n)
-    //Space Complexity --> O(1)
+    //Space Complexity --> O(1) 
     static int[] sortArrayZeorAndOne(int arr[]){
         int i = 0 , j = arr.length-1;
         while(i <= j ){
@@ -270,6 +270,27 @@ class SortArray{
     }
     public static void main(String[] args){
         int ans[] = sortArrayZeorAndOne(new int[]{1,1,0,1,0,1,1,1,0,0,1});
+        for(int num : ans){
+            System.out.print(num +" ");
+        }
+    }
+}
+
+//Two Sum
+class twoSumBruteForce{
+    static int[] twoSum(int arr[] , int target){
+        int n =arr.length;
+        for(int i = 0 ; i< n;i++){
+            for(int j = i+1 ; j<n ;j++){
+                if((arr[i]+arr[j]) == target)
+                return new int[]{arr[i] , arr[j]};
+            }
+        }
+        return new int[]{-1,-1};
+    }
+    public static void main(String[]args){
+        int arr[] = {2,5,8,6,3,9,3,5,8};
+        int ans[] = twoSum(arr , 8);
         for(int num : ans){
             System.out.print(num +" ");
         }
