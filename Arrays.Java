@@ -322,40 +322,63 @@ class TwoSum{
 }
 
 //Three Sum better
-class ThreeSum{
-     public static List<List<Integer>> threeSum(int[] nums) {
-        List<List<Integer>> list = new ArrayList<>();
-        Arrays.sort(nums);
-        for(int i =0 ; i< nums.length-2 ;i++){
-            if(i >0  && nums[i]==nums[i-1])
-            continue;
-            findTriplets(nums , -nums[i] , i+1 , list);
-        }
-        return list;
-    }
-    public static void findTriplets(int[]nums , int target , int left , List<List<Integer>>list){
-        int right = nums.length-1;
-        while(left < right){
-            int sum = nums[left]+nums[right];
-            if(sum == target){
-                list.add(Arrays.asList(nums[left] , nums[right] , -target));
-                left++;
-                right--;
-                while(left < right && nums[left] == nums[left-1])
-                left++;
-                while(left < right && nums[right] == nums[right+1])
-                right--;
-            }else if(sum > target){
-                right--;
-            }else{
-                left++;
+// class ThreeSum{
+//      public static List<List<Integer>> threeSum(int[] nums) {
+//         List<List<Integer>> list = new ArrayList<>();
+//         Arrays.sort(nums);
+//         for(int i =0 ; i< nums.length-2 ;i++){
+//             if(i >0  && nums[i]==nums[i-1])
+//             continue;
+//             findTriplets(nums , -nums[i] , i+1 , list);
+//         }
+//         return list;
+//     }
+//     public static void findTriplets(int[]nums , int target , int left , List<List<Integer>>list){
+//         int right = nums.length-1;
+//         while(left < right){
+//             int sum = nums[left]+nums[right];
+//             if(sum == target){
+//                 list.add(Arrays.asList(nums[left] , nums[right] , -target));
+//                 left++;
+//                 right--;
+//                 while(left < right && nums[left] == nums[left-1])
+//                 left++;
+//                 while(left < right && nums[right] == nums[right+1])
+//                 right--;
+//             }else if(sum > target){
+//                 right--;
+//             }else{
+//                 left++;
+//             }
+//         }
+//     }
+//     public static void main (String[]args){
+//         List<List<Integer>> ans = threeSum(new int[]{4,8,9,6,2,5,3,7});
+//         for(List<Integer> li: ans){
+//             System.out.print(li);
+//         }
+//     }
+// }
+
+class Duplicates{
+    static int[] RemoveSuplicates(int arr[]){
+        int i = 0, j=1 , n=arr.length;
+        while(j < n){
+            if(arr[j] == arr[i])
+            j++;
+            else{
+                i++;
+                arr[i]=arr[j];
+                j++;
             }
         }
+        return arr;
     }
-    public static void main (String[]args){
-        List<List<Integer>> ans = threeSum(new int[]{4,8,9,6,2,5,3,7});
-        for(List<Integer> li: ans){
-            System.out.print(li);
-        }
+
+    public static void main(String[]args){
+       int ans[] = RemoveSuplicates(new int[]{-20,-20,-16,-2,-1,4,8});
+       for(int num : ans){
+        System.out.print(num +" ");
+       }
     }
 }
