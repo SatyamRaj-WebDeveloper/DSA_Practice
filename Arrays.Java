@@ -360,6 +360,7 @@ class TwoSum{
 //     }
 // }
 
+//Brute Force
 class Duplicates{
     static int[] RemoveSuplicates(int arr[]){
         int i = 0, j=1 , n=arr.length;
@@ -380,5 +381,23 @@ class Duplicates{
        for(int num : ans){
         System.out.print(num +" ");
        }
+    }
+}
+
+//Better Approach for Remove Duplicate Array --> Frequency (HashMap)
+class Repeating{
+    static int findfirstRepeatingElement(int arr[]){
+        HashMap<Integer,Integer> map = new HashMap<>();
+        for(int num : arr){
+            map.put(num , map.getOrDefault(num,0)+1);
+        }
+        for(int num : arr){
+            if(map.get(num)>1)
+            return num ;
+        }
+        return -1;
+    }
+    public static void main(String[] args){
+        System.out.print(findfirstRepeatingElement(new int[]{10,5,3,4,3,5,6}));
     }
 }
