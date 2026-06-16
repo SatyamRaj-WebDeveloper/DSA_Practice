@@ -401,3 +401,29 @@ class Repeating{
         System.out.print(findfirstRepeatingElement(new int[]{10,5,3,4,3,5,6}));
     }
 }
+
+class findMissing{
+    static List<Integer> findMissingElements(int arr[]){
+        List<Integer> li = new ArrayList<>();
+        int n = arr.length;
+        for(int i = 0 ; i<n ; i++){
+            int val = Math.abs(arr[i]);
+            int position = val-1;
+            if(arr[position] > 0){
+                arr[position] = -arr[position];
+            }
+        }
+        for(int i = 0 ;i<n ;i++){
+            if(arr[i] > 0)
+            li.add(i+1);
+        }
+
+        return li;
+    }
+    public static void main(String[]args){
+        List<Integer> ans =  findMissingElements(new int[]{8,2,1,10,9,4,6,4,5,6});
+        for(int num : ans){
+            System.out.print(num+",");
+        }
+    }
+}
