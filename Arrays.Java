@@ -447,3 +447,32 @@ class MaxSubArray{
         System.out.print(findMaxSumSubarray(new int[]{-1,1,-3,4,-1,2,1,-5,4}));
     }
 }
+
+//2-D Arrays
+
+class printSum{
+    static List<Integer> findSumOfRows(int nums[][]){
+        List<Integer> li = new ArrayList<>();
+         int n = nums.length;
+         int m = nums[0].length;
+         for(int i = 0; i< n ;i++){
+            int sum = 0;
+            for(int j = 0 ; j < m ;j++){
+                sum += nums[i][j];
+            }
+            li.add(sum);
+         }
+         return li;
+    }
+    public static void main(String[]args){
+        int[][] arr = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+        List<Integer> ans = findSumOfRows(arr);
+        for(int num : ans){
+            System.out.print(num + ",");
+        }
+    }
+}
