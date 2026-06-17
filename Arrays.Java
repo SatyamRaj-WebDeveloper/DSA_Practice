@@ -511,3 +511,32 @@ class PrintSumWave{
         }
     }
 }
+
+class matrixTranspose{
+     static int[][] transpose(int[][] matrix) {
+        int n = matrix.length;
+        int m = matrix[0].length;
+        int [][] ans  =  new int[n][m];
+        for(int row = 0 ; row < n ; row++){
+            for(int col=0;col < m ; col++){
+                ans[row][col] = matrix[col][row];
+            }
+        }
+        return ans;
+    }
+
+    public static void main(String[]args){
+        int [][] arr = {
+            {10,20,30},
+            {40,50,60},
+            {70,80,90}
+        };
+        int [][]ans  = transpose(arr);
+        for(int i =0 ; i< ans.length ;i++){
+            for(int j = 0 ; j<ans[0].length ;j++){
+                System.out.print(ans[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+}
