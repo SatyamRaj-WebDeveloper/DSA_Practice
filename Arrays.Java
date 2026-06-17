@@ -402,6 +402,7 @@ class Repeating{
     }
 }
 
+
 class findMissing{
     static List<Integer> findMissingElements(int arr[]){
         List<Integer> li = new ArrayList<>();
@@ -425,5 +426,24 @@ class findMissing{
         for(int num : ans){
             System.out.print(num+",");
         }
+    }
+}
+
+class MaxSubArray{
+    static int findMaxSumSubarray(int arr[]){
+        int n = arr.length , sum =0 , maxSum = Integer.MIN_VALUE;
+        for(int i = 0 ;i<n ;i++){
+             sum += arr[i];
+             if(sum > maxSum){
+                maxSum = sum;
+             }
+             if(sum < 0){
+                sum =0;
+             }
+        }
+        return maxSum;
+    }
+    public static void main(String[]args){
+        System.out.print(findMaxSumSubarray(new int[]{-1,1,-3,4,-1,2,1,-5,4}));
     }
 }
