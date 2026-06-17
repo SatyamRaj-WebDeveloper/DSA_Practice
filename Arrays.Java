@@ -476,3 +476,38 @@ class printSum{
         }
     }
 }
+
+class PrintSumWave{
+    static List<Integer> findSumWave(int nums[][]){
+        List<Integer> li = new ArrayList<>();
+        int  n = nums.length;
+        int m = nums[0].length;
+        for(int col =0 ; col<m ; col++){
+            int sum =0;
+            if(col==0 || col%2 == 0){
+                for(int row=0 ; row< n ; row++){
+                    sum += nums[row][col];
+                }
+                li.add(sum);
+            }else{
+                for(int row = n-1 ; row >=0 ; row--){
+                    sum += nums[row][col];
+                }
+                li.add(sum);
+            }
+        }
+        return li;
+    }
+    public static void main(String[]args){
+        int [][]arr = {
+            {1,2,3,4},
+            {5,6,7,8},
+            {9,10,11,12},
+            {13,14,15,16},
+        };
+        List<Integer> ans = findSumWave(arr);
+        for(int num : ans){
+            System.out.print(num +",");
+        }
+    }
+}
